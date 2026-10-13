@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Informe interactivo sobre las Infecciones Respiratorias Agudas y la neumonía en menores de cinco años en el Perú, 2023–2025.">
+  <title>IRA y Neumonía en el Perú | Informe interactivo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="topline"></div>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Inicio">
+      <span class="brand-mark">+</span>
+      <span><strong>Salud<span class="brand-dot">.</span>Datos</strong><small>INFORME INTERACTIVO</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#panorama">Panorama</a>
+      <a href="#indicadores">Indicadores</a>
+      <a href="#analisis">Análisis</a>
+      <a href="#acciones">Acciones</a>
+      <a href="#metodologia">Metodología</a>
+    </nav>
+    <button class="btn btn-outline header-print" onclick="window.print()">Imprimir informe ↗</button>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="eyebrow-dot"></span> PERÚ · 2023—2025</div>
+        <h1>Infecciones respiratorias agudas <span>y neumonía</span> en menores de 5 años</h1>
+        <p class="hero-lead">Una mirada basada en datos para comprender la evolución de los casos, observar las defunciones registradas y orientar decisiones de prevención en salud pública.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#indicadores">Explorar indicadores <span>↓</span></a>
+          <a class="text-link" href="#metodologia">Ver metodología <span>↗</span></a>
+        </div>
+        <div class="hero-note"><span class="note-icon">i</span><span>Informe académico. Las cifras se presentan según el material de trabajo utilizado; consulta la fuente y las limitaciones al final.</span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="visual-grid"></div>
+        <div class="visual-orb orb-one"></div><div class="visual-orb orb-two"></div>
+        <div class="hero-card card-main">
+          <div class="card-label">EPISODIOS DE IRA · 2025</div>
+          <div class="big-number">824,978</div>
+          <div class="trend good"><span>↘</span> 7% frente a 2024</div>
+          <div class="mini-bars" aria-label="Tendencia de episodios de IRA"><i style="height:88%"></i><i style="height:77%"></i><i style="height:70%"></i></div>
+          <div class="mini-years"><span>2023</span><span>2024</span><span>2025</span></div>
+        </div>
+        <div class="floating-stat"><span class="floating-icon">♡</span><div><strong>51</strong><small>defunciones registradas<br>por neumonía · 2025</small></div></div>
+        <div class="hero-caption">DATOS PARA DECISIONES MÁS INFORMADAS</div>
+      </div>
+    </section>
+
+    <section class="section intro-section" id="panorama">
+      <div class="section-kicker">01 / PANORAMA</div>
+      <div class="section-heading-row">
+        <div><h2>¿Qué nos dicen los datos?</h2><p class="section-subtitle">Los valores recopilados muestran una reducción entre 2023 y 2025 en los dos indicadores presentados.</p></div>
+        <div class="period-pill"><span></span> Periodo analizado: 3 años</div>
+      </div>
+      <div class="insight-grid">
+        <article class="insight-card">
+          <div class="insight-icon blue">↘</div><div class="insight-tag">EPISODIOS DE IRA</div>
+          <h3>Menos episodios reportados</h3><p>De 1,003,178 episodios en 2023 a 824,978 en 2025, según las cifras del material de referencia.</p>
+          <div class="insight-bottom"><span>Variación 2023–2025</span><strong>−17.8%</strong></div>
+        </article>
+        <article class="insight-card">
+          <div class="insight-icon green">↓</div><div class="insight-tag">NEUMONÍA</div>
+          <h3>Disminución de defunciones</h3><p>Las defunciones indicadas pasan de 113 en 2023 a 51 en 2025.</p>
+          <div class="insight-bottom"><span>Variación 2023–2025</span><strong>−54.9%</strong></div>
+        </article>
+        <article class="insight-card">
+          <div class="insight-icon amber">◎</div><div class="insight-tag">LECTURA RESPONSABLE</div>
+          <h3>Una tendencia no prueba causalidad</h3><p>La evolución temporal no permite atribuir los cambios a una intervención concreta sin datos adicionales.</p>
+          <div class="insight-bottom"><span>Interpretación</span><strong>Descriptiva</strong></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section metrics-section" id="indicadores">
+      <div class="section-kicker">02 / INDICADORES</div>
+      <div class="section-heading-row"><div><h2>Indicadores principales</h2><p class="section-subtitle">Explora la serie anual y compara los cambios entre los años disponibles.</p></div><div class="segmented" role="group" aria-label="Seleccionar indicador"><button class="active" data-chart="ira">Episodios de IRA</button><button data-chart="pneumonia">Defunciones</button></div></div>
+      <div class="chart-layout">
+        <article class="chart-card">
+          <div class="chart-top"><div><div class="chart-label" id="chartLabel">EPISODIOS DE IRA</div><h3 id="chartTitle">Evolución anual de episodios</h3></div><span class="chart-badge">2023—2025</span></div>
+          <div class="chart-wrap"><canvas id="trendChart" role="img" aria-label="Gráfico de tendencia de los indicadores entre 2023 y 2025"></canvas></div>
+          <div class="chart-legend"><span><i class="legend-dot"></i><span id="legendText">Episodios de IRA</span></span><span class="legend-muted">Fuente: material de referencia del trabajo</span></div>
+        </article>
+        <aside class="data-card">
+          <div class="data-card-head"><div><div class="chart-label">DATOS DE LA SERIE</div><h3>Valores reportados</h3></div><span class="table-icon">▦</span></div>
+          <table><thead><tr><th>Año</th><th id="tableMetric">Episodios</th><th>Variación</th></tr></thead><tbody id="dataTable"></tbody></table>
+          <div class="data-foot"><span class="foot-check">✓</span><span>Los valores son editables en el archivo <code>script.js</code> para actualizar el análisis.</span></div>
+        </aside>
+      </div>
+      <div class="metric-strip">
+        <div><span class="metric-label">IRA · 2023</span><strong>1,003,178</strong><small>episodios</small></div>
+        <div class="strip-arrow">→</div>
+        <div><span class="metric-label">IRA · 2025</span><strong>824,978</strong><small>episodios</small></div>
+        <div class="strip-divider"></div>
+        <div><span class="metric-label">NEUMONÍA · 2023</span><strong>113</strong><small>defunciones</small></div>
+        <div class="strip-arrow">→</div>
+        <div><span class="metric-label">NEUMONÍA · 2025</span><strong>51</strong><small>defunciones</small></div>
+      </div>
+    </section>
+
+    <section class="section analysis-section" id="analisis">
+      <div class="section-kicker">03 / ANÁLISIS CON IA</div>
+      <div class="analysis-intro"><div><h2>De los datos a una decisión</h2><p class="section-subtitle">Un flujo de trabajo académico conecta la representación del problema, la comparación de alternativas y una lectura predictiva prudente.</p></div><div class="ai-symbol">✳</div></div>
+      <div class="pipeline">
+        <div class="pipeline-step"><span class="step-num">01</span><div class="step-icon">⌕</div><h3>Observar</h3><p>Organizar los episodios de IRA y las defunciones por año.</p><span class="step-tag">Datos disponibles</span></div>
+        <div class="pipeline-connector">→</div>
+        <div class="pipeline-step"><span class="step-num">02</span><div class="step-icon">⌘</div><h3>Representar</h3><p>Definir indicadores, periodo, población y límites de la información.</p><span class="step-tag">Problema definido</span></div>
+        <div class="pipeline-connector">→</div>
+        <div class="pipeline-step"><span class="step-num">03</span><div class="step-icon">⇄</div><h3>Comparar</h3><p>Valorar alternativas preventivas con criterios explícitos.</p><span class="step-tag">Matriz ilustrativa</span></div>
+        <div class="pipeline-connector">→</div>
+        <div class="pipeline-step"><span class="step-num">04</span><div class="step-icon">↗</div><h3>Interpretar</h3><p>Describir tendencias y proponer qué datos faltan para predecir mejor.</p><span class="step-tag">Conclusión prudente</span></div>
+      </div>
+      <div class="analysis-bottom">
+        <article class="recommendation-card"><div class="rec-top"><span class="rec-icon">✦</span><span class="rec-label">LECTURA DEL ANÁLISIS</span></div><h3>Priorizar prevención y vigilancia, sin asumir causalidad</h3><p>La reducción observada es favorable, pero para evaluar la eficacia de vacunación, campañas o atención oportuna se necesitan datos de cobertura, distribución territorial, costos y factores de riesgo.</p><div class="rec-footer">Resultado orientativo · No sustituye la evaluación sanitaria oficial</div></article>
+        <article class="alternatives-card"><div class="data-card-head"><div><div class="chart-label">COMPARACIÓN ILUSTRATIVA</div><h3>Alternativas preventivas</h3></div><span class="chart-badge">Escala 1–5</span></div><p class="small-note">Puntuaciones hipotéticas para demostrar una matriz de decisión; no son mediciones oficiales ni una evaluación de impacto.</p><div class="alternative-row"><div class="alt-head"><span>Vacunación y campañas</span><strong>4.25</strong></div><div class="bar-track"><div class="bar-fill" style="width:85%"></div></div></div><div class="alternative-row"><div class="alt-head"><span>Higiene y ventilación</span><strong>4.25</strong></div><div class="bar-track"><div class="bar-fill green-fill" style="width:85%"></div></div></div><div class="alternative-row"><div class="alt-head"><span>Atención oportuna</span><strong>3.00</strong></div><div class="bar-track"><div class="bar-fill amber-fill" style="width:60%"></div></div></div><div class="weight-note">Ponderaciones ilustrativas: prevención 50%, factibilidad 25%, rapidez de respuesta 25%.</div></article>
+      </div>
+    </section>
+
+    <section class="section action-section" id="acciones">
+      <div class="section-kicker">04 / RESPUESTA EN SALUD PÚBLICA</div>
+      <div class="section-heading-row"><div><h2>Acciones que vale la pena sostener</h2><p class="section-subtitle">Medidas preventivas y de respuesta mencionadas en el material de referencia.</p></div></div>
+      <div class="action-grid">
+        <article class="action-card"><div class="action-number">01</div><div class="action-icon">◉</div><h3>Vacunación</h3><p>Promover la vacunación contra neumococo e influenza conforme a las recomendaciones sanitarias vigentes.</p><span>Prevención</span></article>
+        <article class="action-card"><div class="action-number">02</div><div class="action-icon">✳</div><h3>Higiene y ventilación</h3><p>Reforzar el lavado de manos, la ventilación de ambientes y el uso de mascarilla cuando corresponda por síntomas.</p><span>Reducción de riesgos</span></article>
+        <article class="action-card"><div class="action-number">03</div><div class="action-icon">＋</div><h3>Atención oportuna</h3><p>Buscar atención sanitaria temprana ante signos de alarma y evitar la automedicación en niñas y niños.</p><span>Respuesta temprana</span></article>
+        <article class="action-card"><div class="action-number">04</div><div class="action-icon">⌖</div><h3>Vigilancia territorial</h3><p>Mejorar la disponibilidad de datos regionales para reconocer zonas prioritarias y distribuir recursos.</p><span>Gestión informada</span></article>
+      </div>
+      <div class="alert-note"><span>!</span><p><strong>Importante:</strong> estas son líneas generales de prevención y análisis académico. La aplicación concreta debe seguir las indicaciones del Ministerio de Salud y del personal sanitario.</p></div>
+    </section>
+
+    <section class="section methodology-section" id="metodologia">
+      <div class="section-kicker">05 / METODOLOGÍA Y LÍMITES</div>
+      <div class="method-grid">
+        <div><h2>Transparencia sobre los datos</h2><p class="section-subtitle">La calidad de una conclusión depende tanto de los datos disponibles como de reconocer lo que todavía no se conoce.</p><div class="source-box"><div class="source-icon">↗</div><div><strong>Fuente indicada en el material</strong><p>Ministerio de Salud del Perú (MINSA), enlace compartido para el trabajo.</p><a href="https://www.gob.pe/institucion/minsa/noticias/1192975" target="_blank" rel="noopener noreferrer">Consultar publicación en gob.pe ↗</a></div></div></div>
+        <div class="limits-card"><h3>Qué incluye y qué falta</h3><div class="limit-item"><span class="limit-check">✓</span><div><strong>Disponible en el análisis</strong><p>Año, episodios de IRA y defunciones por neumonía (2023–2025), según las cifras del material.</p></div></div><div class="limit-item"><span class="limit-minus">−</span><div><strong>No disponible en el material revisado</strong><p>Cobertura real de vacunas, distribución regional detallada, costos, factores climáticos y socioeconómicos, y efecto causal de cada intervención.</p></div></div><div class="limit-item"><span class="limit-info">i</span><div><strong>Alcance</strong><p>El análisis es descriptivo e ilustrativo. No debe interpretarse como una predicción validada ni como prueba de que una medida causó la disminución.</p></div></div></div>
+      </div>
+      <div class="method-footer"><div><span class="footer-mark">SD</span><div><strong>Salud.Datos</strong><small>Proyecto académico · Challenge 2</small></div></div><p>Datos de referencia 2023–2025 · Sitio estático desarrollado con HTML, CSS y JavaScript.</p><a href="#inicio">Volver arriba ↑</a></div>
+    </section>
+  </main>
+  <footer class="site-footer"><span>© 2026 · Informe académico</span><span>Datos · Análisis · Prevención</span><span>Diseñado para lectura web y exportación a PDF</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>
